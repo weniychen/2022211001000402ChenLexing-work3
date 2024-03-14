@@ -14,7 +14,7 @@ public class HelloWorldServlet extends HttpServlet {
             PrintWriter writer = response.getWriter();
         writer.println("Name:Chen Lexing");
         writer.println("ID:2022211001000402");
-        writer.println("Date and Time: Tue Mar 14 12:33:40 CST 2024");
+        writer.println("Date and Time: Thu Mar 14 12:33:40 CST 2024");
         }
 
 
