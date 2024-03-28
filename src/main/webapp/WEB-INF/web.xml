@@ -3,12 +3,50 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+   <!-- <servlet>
+        <servlet-name>chenlexing</servlet-name>
+        <servlet-class>com.example._2022211001000402ChenLexing.RegisterServlet</servlet-class>
+    </servlet>-->
+    <servlet>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <servlet-class>com.example._2022211001000402ChenLexing.week4.ConfigDemoServlet</servlet-class>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>ChenLexing</param-value>
+        </init-param>
+        <init-param>
+            <param-name>id</param-name>
+            <param-value>2022211001000402</param-value>
+        </init-param>
+    </servlet>
     <servlet>
         <servlet-name>chenlexing</servlet-name>
-        <servlet-class>com.example._2022211001000402ChenLexing.HelloWorldServlet</servlet-class>
+        <servlet-class>com.example._2022211001000402ChenLexing.week4.RegisterServlet</servlet-class>
     </servlet>
-<servlet-mapping>
-    <servlet-name>chenlexing</servlet-name>
-    <url-pattern>/hello</url-pattern>
-</servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>chenlexing</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConfigDemoServlet</servlet-name>
+        <url-pattern>/config</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>driver</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/userdb?useUnicode=true&amp;characterEncoding=utf-8</param-value>
+    </context-param>
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>123456</param-value>
+    </context-param>
 </web-app>
